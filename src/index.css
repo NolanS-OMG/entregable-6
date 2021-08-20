@@ -1,13 +1,152 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: texts;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: texts;
+  src: url('./fonts/coolvetica\ rg.ttf');
+}
+
+nav {
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(250,200,200);
+  border-bottom: solid 2px black;
+}
+
+nav h4 {
+  font-size: 2.5rem;
+}
+
+nav ul {
+  width: 50%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  font-size: 2rem;
+}
+
+nav ul li button{
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+span {
+  cursor: pointer;
+}
+
+.chats-list {
+  background-color: black;
+}
+
+.chats-list ul {
+  margin-left: 1%;
+  margin-right: 1%;
+  display: flex;
+  list-style: none;
+}
+
+.chats-list ul li {
+  padding: 0.5%;
+}
+
+.chats-list ul li a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.chat {
+  width: 98%;
+  margin: 1%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chat form {
+  border: solid 1px gray;
+  border-radius: 5px;
+  padding: 0.1%;
+}
+
+.chat form input{
+  width: 80%;
+}
+
+.chat form button {
+  width: 20%;
+}
+
+.msg-container {
+  border: solid 1px gray;
+  border-radius: 5px;
+  padding: 0.1%;
+  overflow: auto;
+}
+
+.sign-container {
+  width: 100%;
+  display: flex;
+}
+
+.sign {
+  width: 45%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.sign form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign form label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+
+.sign form input {
+  width: 80%;
+}
+
+.sign form button {
+  width: 35%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-left: 32.5%;
+  margin-right: 32.5%;
+}
+
+.sign button {
+  width: 35%;
+  font-size: 1.2rem;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.sign a {
+  margin: auto;
+  padding-top: 1%;
 }

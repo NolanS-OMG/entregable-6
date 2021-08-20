@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {ProvideAuth} from './AuthProvider.js';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <React.StrictMode>
+      <ProvideAuth>
+        <App />
+      </ProvideAuth>
+    </React.StrictMode>,
   document.getElementById('root')
 );
 
