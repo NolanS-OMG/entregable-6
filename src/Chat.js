@@ -31,10 +31,10 @@ const Chat = () => {
             email: localUser.email
         })
     }
-    const showMessages = messages ? messages.map(({id,text,userName,email}) => {
+    const showMessages = (localUser && messages) ? messages.map(({id,text,userName,email}) => {
         return(
-            <div key = {id}>
-                <p><span onClick={() => {
+            <div key = {id + text + email}>
+                <p key={'paragraph:'+id + text + email}><span key={'span:'+id + text + email} onClick={() => {
                     createNewChat(email, userName);
                     }} style = {localUser.email === email ? {color:'firebrick'}: {color:'black'}}>{userName}: </span>{text}</p>
             </div>

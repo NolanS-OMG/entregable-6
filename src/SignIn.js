@@ -5,9 +5,6 @@ import { useEffect } from 'react';
 
 const SignIn = () => {
     const {localUser} = useAuth();
-    useEffect(() => {
-        return null
-    }, [])
     return (
         <div className='sign-container'>
             {localUser ? <Redirect to = '/chat/0'/>: <UserForm/>}
